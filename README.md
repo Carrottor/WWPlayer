@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./screenshots/wwplayer-logo.png" width="104" alt="WWPlayer Logo" />
   <h1>WWPlayer</h1>
-  <p><strong>把自建媒体服务器、网络存储与本地影片放进同一个 Windows 播放器。</strong></p>
+  <p><strong>接入 Emby、Jellyfin、飞牛影视，以及本地目录、WebDAV、OpenList、OneDrive 和 SMB，打造独一无二的沉浸式媒体库。</strong></p>
   <p>统一浏览、跨服聚合、智能选源，并用内置 libmpv 完成高质量播放。</p>
 
   <p>
