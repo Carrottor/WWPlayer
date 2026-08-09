@@ -7,7 +7,7 @@
 <div align="center">
   <img src="./screenshots/wwplayer-logo.png" width="104" alt="WWPlayer Logo" />
   <h1>WWPlayer</h1>
-  <p><strong>接入 Emby、Jellyfin、飞牛影视，以及本地目录、WebDAV、OpenList、OneDrive 和 SMB，打造独一无二的沉浸式媒体库。</strong></p>
+  <p><strong>接入 Emby、Jellyfin、飞牛影视，以及本地目录、WebDAV、OpenList、OneDrive 和 SMB，将分散内容汇聚到统一媒体库；通过可自由编排的首页、丰富栏目与多样化内容组件，打造独一无二的沉浸式观影空间。</strong></p>
   <p>统一浏览、跨服聚合、智能选源，并用内置 libmpv 完成高质量播放。</p>
 
   <p>

@@ -7,7 +7,7 @@
 <div align="center">
   <img src="./screenshots/wwplayer-logo.png" width="104" alt="WWPlayer Logo" />
   <h1>WWPlayer</h1>
-  <p><strong>Connect Emby, Jellyfin, FNOS Video, local folders, WebDAV, OpenList, OneDrive, and SMB to create an immersive media library of your own.</strong></p>
+  <p><strong>Connect Emby, Jellyfin, FNOS Video, local folders, WebDAV, OpenList, OneDrive, and SMB to bring scattered content into one unified media library; create a uniquely immersive viewing space with a freely customizable home screen, rich content sections, and versatile widgets.</strong></p>
   <p>Browse everything in one place, aggregate sources across servers, choose the best file, and play through the built-in libmpv engine.</p>
 
   <p>
