@@ -1,3 +1,9 @@
+<p align="center">
+  <strong>简体中文</strong> |
+  <a href="./README.zh-TW.md">繁體中文</a> |
+  <a href="./README.en.md">English</a>
+</p>
+
 <div align="center">
   <img src="./screenshots/wwplayer-logo.png" width="104" alt="WWPlayer Logo" />
   <h1>WWPlayer</h1>
@@ -9,6 +15,7 @@
     <img src="https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078d4?style=flat-square&logo=windows11&logoColor=white" alt="Windows 10 / 11" />
     <img src="https://img.shields.io/badge/architecture-x64-555?style=flat-square" alt="x64" />
     <img src="https://img.shields.io/badge/player-libmpv-111827?style=flat-square" alt="libmpv" />
+    <a href="https://t.me/WWPlayer_chat"><img src="https://img.shields.io/badge/Telegram-WWPlayer__chat-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="加入 WWPlayer Telegram 群组" /></a>
   </p>
 
   <p>
