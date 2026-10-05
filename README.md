@@ -5,246 +5,147 @@
 </p>
 
 <div align="center">
-  <img src="./screenshots/wwplayer-logo.png" width="104" alt="WWPlayer Logo" />
+  <img src="./screenshots/readme-1.3.0/wwplayer-mark.svg" width="104" alt="WWPlayer Logo" />
   <h1>WWPlayer</h1>
-  <p><strong>接入 Emby、Jellyfin、飞牛影视，以及本地目录、WebDAV、OpenList、OneDrive 和 SMB，将分散内容汇聚到统一媒体库；通过可自由编排的首页、丰富栏目与多样化内容组件，打造独一无二的沉浸式观影空间。</strong></p>
-  <p>统一浏览、跨服聚合、智能选源，并用内置 libmpv 完成高质量播放。</p>
-
+  <p><strong>所有收藏。一个主场。</strong></p>
+  <p>Emby、Jellyfin、飞牛影视、网盘、NAS 与本地目录，汇成一个媒体库，交给 libmpv 播放。</p>
   <p>
-    <img src="https://img.shields.io/badge/version-1.1.6-ff6b35?style=flat-square" alt="Version 1.1.6" />
-    <img src="https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078d4?style=flat-square&logo=windows11&logoColor=white" alt="Windows 10 / 11" />
+    <img src="https://img.shields.io/badge/version-1.3.0-555?style=flat-square" alt="Version 1.3.0" />
+    <img src="https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078d4?style=flat-square" alt="Windows 10 / 11" />
     <img src="https://img.shields.io/badge/architecture-x64-555?style=flat-square" alt="x64" />
     <img src="https://img.shields.io/badge/player-libmpv-111827?style=flat-square" alt="libmpv" />
-    <a href="https://t.me/WWPlayer_chat"><img src="https://img.shields.io/badge/Telegram-WWPlayer__chat-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="加入 WWPlayer Telegram 群组" /></a>
   </p>
-
   <p>
-    <a href="https://get.microsoft.com/installer/download/9ND8050FCRG2?referrer=appbadge" target="_self">
-      <img src="https://get.microsoft.com/images/zh-cn%20dark.svg" width="200" alt="从 Microsoft Store 下载 WWPlayer" />
-    </a>
+    <a href="https://wwplayer.com">官网</a> ·
+    <a href="https://wwplayer.com/docs.html">使用文档</a> ·
+    <a href="https://nexus.wwplayer.com">NEXUS</a> ·
+    <a href="https://t.me/WWPlayer_chat">Telegram</a>
   </p>
+  <a href="https://apps.microsoft.com/detail/9ND8050FCRG2">
+    <img src="https://get.microsoft.com/images/zh-cn%20dark.svg" width="200" alt="从 Microsoft Store 获取 WWPlayer" />
+  </a>
 </div>
 
-![WWPlayer 首页轮播](./screenshots/00-home-standby.png)
+![WWPlayer 首页](./screenshots/readme-1.3.0/01-home.jpg)
 
-WWPlayer 是一款面向个人媒体库的 Windows 桌面客户端。它可以同时接入 Emby、Jellyfin、飞牛影视，以及本地目录、WebDAV、OpenList、OneDrive 和 SMB，把分散在不同位置的影片集中到一套首页、搜索、详情、片单与播放流程中。
+WWPlayer 是面向个人媒体库的 Windows 桌面客户端。在统一界面中浏览媒体、搜索影片、整理片单、追踪观看进度，并使用内置 libmpv 播放。
 
 > [!IMPORTANT]
-> WWPlayer 本身不提供、存储或分发任何影视内容。使用者需要自行准备合法可访问的媒体服务器、网络存储或本地媒体，并对所接入内容的使用权限负责。
+> WWPlayer 不提供、存储或分发任何影视内容。你需要自行准备合法可访问的媒体服务器、网络存储或本地媒体。
 
-## ✨ 一眼看懂 WWPlayer
+## 🧩 多种来源，一个入口
 
-- **多来源统一管理**：服务器、网盘、NAS 共享和本地目录集中管理，不必在多个客户端之间反复切换。
-- **跨服务器聚合**：搜索、收藏、继续观看、播放进度和同名资源可以跨服务器整理到一起。
-- **更完整的选源体验**：在详情页或播放中按特殊格式、分辨率、码率、文件大小筛选并切换资源。
-- **自由编排的发现首页**：组合 TMDB、Trakt、IMDb、媒体库、本地目录、片单和发现模块，支持多种栏目布局。
-- **内置 libmpv 播放**：支持硬件解码、GPU 输出、缓存控制、音轨字幕、弹幕、自定义快捷键和独立播放器窗口。
-- **高动态范围兼容**：识别 HDR10、HDR10+、HLG 与 Dolby Vision 资源，并结合 Windows HDR 状态进行 HDR 输出或 SDR 色调映射。
-- **追剧辅助能力**：继续观看、观看状态、Trakt 进度、追剧日历、片头片尾标记，以及下一集预加载（Beta）。
-- **配置迁移与同步**：服务器配置可导入/导出为 `.wwpcfg`，并提供 WebDAV 多设备配置同步能力。
-
-## 🧩 支持的媒体来源
-
-| 类别 | 支持项 | 主要能力 |
-| --- | --- | --- |
-| 媒体服务器 | Emby、Jellyfin、飞牛影视 | 媒体库、详情、剧集、搜索、收藏、观看状态、资源与线路管理 |
-| 网络存储 | WebDAV、OpenList、OneDrive、SMB | 目录浏览、媒体扫描、海报与缩略图、直接播放、继续观看；OneDrive 支持浏览器登录 |
-| 本地媒体 | Windows 本地文件夹 | 媒体扫描、目录浏览、本地播放记录、继续观看 |
-| 内容与追踪 | TMDB、Trakt、IMDb | 元数据、热门与榜单、追剧日历、播放进度、个人片单与推荐 |
-| 扩展来源 | 发现模块、M3U / M3U8 | 自定义发现数据、模块详情与资源、电视直播栏目 |
-
-> [!NOTE]
-> 不同服务端版本、接口权限和媒体组织方式可能影响部分能力。飞牛影视、Jellyfin 与各类存储来源会按各自可用接口呈现功能，不强行模拟不存在的服务端能力。
-
-## 🏠 首页与继续观看
-
-首页以沉浸式背景轮播展示近期内容，同时保留继续观看、最近更新、收藏等高频入口。继续观看可以合并多个服务器、Trakt 与本地来源的进度，并保留剧集、集数和播放进度信息。
-
-- 轮播背景可使用服务器或 TMDB 图片，并支持详情背景轮播。
-- 继续观看支持跨来源聚合、移除记录、清除进度和跳转来源服务器。
-- 多服务器同一影片可合并进度，减少重复卡片。
-- 可按服务器控制是否参与首页、搜索、收藏和继续观看聚合。
-
-![首页轮播与继续观看](./screenshots/01-home-carousel-continue.png)
-
-## 🎬 详情、剧集与多资源
-
-详情页不只展示简介，还会把同一影片在不同服务器、线路和媒体文件中的可播放资源集中起来。资源卡片可展开查看路径、封装、分辨率、视频编码、动态范围、位深、码率、帧率、音轨和字幕等信息。
-
-- 同名影片和剧集可跨服务器聚合，保留真实来源与线路。
-- 支持按特殊格式、分辨率、码率、大小排序，并记忆常用选源偏好。
-- 在播放前选择音轨与字幕，播放中仍可快速切换资源。
-- 剧集支持季/集浏览、观看状态维护、整季标记以及下一集更新提示。
-- 演职员、艺术图、相似内容与推荐内容集中在同一详情页。
-
-![详情页与多服务器资源](./screenshots/02-detail-resources.png)
-
-<details>
-  <summary><strong>查看完整资源参数、演职员与相关推荐</strong></summary>
-  <br />
-  <img src="./screenshots/03-detail-metadata.png" alt="详情页完整媒体参数" />
-</details>
-
-## 🧭 发现页与栏目系统
-
-发现页是一套可编辑的内容工作台。每个栏目都可以独立选择数据来源、标题、排序方式和视觉布局，再通过拖动调整顺序。
-
-- 内置热门电影、热门剧集、趋势、高分、正在热播、动画新番等 TMDB 栏目。
-- 支持 Trakt 热门、趋势、期待、收藏、推荐、个人列表和追剧日历。
-- 支持 IMDb 分类、服务器媒体库、本地目录、自定义片单与发现模块。
-- 提供海报、横向海报、景观图、排行、趋势、焦点、拼贴、分类、排行榜、文件夹、日历和电视直播等布局。
-- 电视栏目可读取本地 M3U / M3U8、远程 M3U URL 或单个直播地址。
-- 栏目可以启用、隐藏、重命名、排序或单独配置数据源。
-
-<details>
-  <summary><strong>展开查看完整发现页与多种栏目布局</strong></summary>
-  <br />
-  <img src="./screenshots/04-discovery-columns.png" alt="WWPlayer 发现页栏目系统" />
-</details>
-
-## ▶️ 播放体验
-
-WWPlayer 默认使用内置 libmpv，在独立原生视频表面上播放，界面控制、服务器会话、鉴权、代理、缓存与播放进度仍由 WWPlayer 管理。也可以切换到外置 mpv，外置播放器使用它自己的配置、脚本和 `portable_config`。
-
-### 画面与声音
-
-- 支持常见 MP4、MKV、TS、M2TS、WebM 等封装，以及 H.264、HEVC、AV1 等常见视频编码；实际解码范围以随包内置的 libmpv / FFmpeg 和设备能力为准。
-- 识别 HDR10、HDR10+、HLG、Dolby Vision 等动态范围标签，并显示分辨率、编码、位深、码率和帧率。
-- 根据 Windows HDR 状态与播放器设置选择输出策略；在 SDR 环境下对 HDR / Dolby Vision 来源执行兼容色调映射。
-- 支持自动安全硬解、D3D11VA、D3D11VA Copy、GPU 选择，以及 `gpu-next` / `gpu` 输出。
-- 提供立体声下混、人声增强和夜间模式等音频处理选项。
-
-### 播放控制
-
-- 播放/暂停、快进快退、音量、静音、倍速、全屏、选集、音轨、字幕和资源切换。
-- 播放中直接检索并切换其他服务器上的同名资源。
-- 可调整缓冲时长与缓存大小，针对远程媒体保持稳定播放。
-- 支持窗口、最大化与全屏启动模式，可选择播放时最小化主窗口。
-- 支持片头、片尾时间点标记和自定义播放器快捷键。
-- 内置播放可启用自定义 `mpv.conf`；外置 mpv 的配置由外置程序自行管理。
-
-<table>
-  <tr>
-    <td width="50%"><img src="./screenshots/11-player-overview.png" alt="内置播放器" /></td>
-    <td width="50%"><img src="./screenshots/12-player-resource-switch.png" alt="播放中切换资源" /></td>
-  </tr>
-  <tr>
-    <td align="center">媒体信息、字幕、弹幕与完整播放控制</td>
-    <td align="center">播放中按格式、分辨率、码率和大小切换资源</td>
-  </tr>
-</table>
-
-### 🧪 Beta 播放能力
-
-| 下一集预加载（Beta） | 时轴缩略图（Beta） |
+| 类别 | 支持来源 |
 | --- | --- |
-| 在当前剧集播放时准备下一集，切集时尽量减少等待。可按服务器单独控制是否参与。 | 拖动或悬停进度条时生成对应时间点画面，便于快速定位内容。 |
-| ![下一集预加载](./screenshots/13-next-episode-preload-beta.png) | ![时轴缩略图](./screenshots/14-timeline-thumbnail-beta.png) |
+| 媒体服务器 | Emby、Jellyfin、飞牛影视 |
+| 网络存储 | WebDAV、OpenList、OneDrive、SMB |
+| 本地媒体 | Windows 本地目录 |
+| 元数据与追踪 | TMDB、Trakt、IMDb、Bangumi |
+| 扩展内容 | 模块、自定义片单、M3U / M3U8 直播 |
 
-> Beta 功能对内核版本、媒体格式、服务器响应和设备性能有更高要求；遇到兼容问题时可在设置中单独关闭。
-
-## 💬 字幕与弹幕
-
-字幕和弹幕拥有独立设置，不需要依赖外部播放器界面完成常用调整。
-
-- 支持服务器字幕与本地字幕导入；本地选择器支持 ASS、SSA、SRT、VTT、SUB、SUP。
-- 可设置默认字幕/音轨语言，并记忆播放中的轨道选择。
-- 字幕支持原始样式、描边阴影、浅色底和深色底模式。
-- 可调整字体、颜色、字号、高度、延迟、描边、阴影和背景透明度。
-- 弹幕支持多 API 管理、字体与颜色、透明度、速度、显示区域、同屏数量和时间偏移。
-- 可分别屏蔽顶部、底部或滚动弹幕。
-
-![字幕与弹幕设置](./screenshots/15-subtitle-danmaku-settings.png)
-
-## 📚 片单与 Trakt
-
-片单页用于整理“想看什么”和“按什么顺序看”，不依赖服务器原本的媒体库结构。
-
-- 提供收藏、待看与自定义片单。
-- 支持创建、编辑、删除和拖动排序。
-- 可从 Trakt 导入列表，并继续使用 Trakt 的播放进度与观看状态。
-- Trakt 连接后可使用追剧日历、个人列表、继续观看、收藏与推荐等数据。
-
-![片单管理](./screenshots/10-playlists.png)
-
-## 🖥️ 服务器与线路管理
-
-服务器页同时展示服务器状态与普通媒体源。每台服务器可维护备注、最近观看时间、保号提醒、图标、线路和聚合策略，便于长期管理多个账号与入口。
-
-- 服务器卡片显示类型、在线状态、延迟、备注、上次观看与保号提示。
-- 每台服务器可配置多条线路，拖动排序、切换主线路并独立探测延迟。
-- 登录信息与线路信息分开维护，修改前可执行连接和登录验证。
-- 支持服务器图标库、首页轮播参与、代理跟随和媒体流代理。
-- 聚合搜索、继续观看、收藏和下一集预加载都可以按服务器单独开关。
-- 支持 `.wwpcfg` 服务器配置导入与导出，迁移时不包含 WebDAV 本地同步设置。
-
-<table>
-  <tr>
-    <td width="50%"><img src="./screenshots/05-servers-overview.png" alt="服务器与媒体源总览" /></td>
-    <td width="50%"><img src="./screenshots/06-add-media-source.png" alt="添加媒体来源" /></td>
-  </tr>
-  <tr>
-    <td align="center">服务器状态、延迟、备注与保号提示</td>
-    <td align="center">服务器、网络存储与本地媒体入口</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td width="50%"><img src="./screenshots/07-server-preferences.png" alt="服务器偏好设置" /></td>
-    <td width="50%"><img src="./screenshots/08-server-lines.png" alt="服务器线路管理" /></td>
-  </tr>
-  <tr>
-    <td align="center">聚合、轮播、代理和预加载策略</td>
-    <td align="center">多线路排序、切换与延迟探测</td>
-  </tr>
-</table>
+- 每个来源保留自己的账号、线路和可用能力；服务器支持线路切换、延迟检测、备注与保号提醒。
+- OneDrive 支持浏览器授权；文件型来源可浏览目录并播放媒体。
+- **Pro** 支持跨服务器搜索、收藏、继续观看和同名资源聚合，在详情页与播放中按格式、分辨率、码率和大小选源。
+- **Pro** 支持本地、WebDAV、OpenList 媒体的 TMDB 刮削、自动匹配与手动更正。
 
 <details>
-  <summary><strong>查看服务器登录信息管理</strong></summary>
+  <summary><strong>查看媒体来源与详情页</strong></summary>
   <br />
-  <img src="./screenshots/09-server-login.png" alt="服务器登录信息管理" />
+  <img src="./screenshots/readme-1.3.0/02-sources.jpg" alt="媒体来源管理" />
+  <img src="./screenshots/readme-1.3.0/03-detail.jpg" alt="详情页与跨服务器资源" />
 </details>
 
-## ⚙️ 配置、网络与外部连接
+## 🏠 自由编排的首页
 
-- **网络**：不使用代理、系统代理或手动代理；媒体流和 TMDB 可分别决定代理策略。
-- **外部连接**：配置 TMDB、Trakt 与 WebDAV，多设备配置同步可独立启用。
-- **播放器**：内置/外置内核、缓存、硬解、GPU、音频处理、时轴缩略图和窗口行为。
-- **聚合**：资源卡片展开方式、跨服搜索/收藏/继续观看、参与服务器和预加载范围。
-- **界面**：浅色模式、背景轮播、磨砂效果与降低视觉效果模式。
-- **维护**：缓存管理、播放器日志、性能诊断、日志导出和桌面快捷方式。
+首页、多首页、栏目和模块对免费版开放。按电影、剧集、动画或家庭成员创建不同首页，自定义名称、图标、顺序与主首页。
 
-![聚合与预加载设置](./screenshots/16-aggregation-preload-settings.png)
+- 组合 TMDB、Trakt、IMDb、媒体库、目录、片单与模块内容，选择海报、排行、拼贴、日历、直播等布局。
+- 支持背景轮播、继续观看、收藏、栏目拖动排序，以及首页导入和导出。
+- 连接 Trakt 追踪观看进度与追剧日历；连接 Bangumi 查看动画收藏状态与放送日历。
+- 首页可启用独立播放历史，不混入其他本机继续播放来源，也不向 Trakt 上报。
 
-## 📦 下载与安装
+![多首页管理](./screenshots/readme-1.3.0/08-home-manager.jpg)
 
-WWPlayer 1.1.6 面向 **Windows 10 1809 及以上版本 / Windows 11，x64 架构**。
+## ▶️ 认真对待画面与声音
 
-正式版仅通过 Microsoft Store 提供。点击下方微软官方徽章进入商店页面并下载安装：
+内置 libmpv 使用独立原生视频窗口，也可选择外置 mpv。播放中可调整音轨、字幕、倍速、画面与声音，并切换剧集和资源。
 
-<p align="center">
-  <a href="https://get.microsoft.com/installer/download/9ND8050FCRG2?referrer=appbadge" target="_self">
-    <img src="https://get.microsoft.com/images/zh-cn%20dark.svg" width="200" alt="从 Microsoft Store 下载 WWPlayer" />
-  </a>
-</p>
+- **画面**：硬件解码、GPU 选择、`gpu-next` / `gpu` 输出；识别 HDR10、HDR10+、HLG 与 Dolby Vision，按 Windows HDR 状态和设置进行输出或 SDR 色调映射。
+- **声音**：立体声下混、人声增强、夜间模式。
+- **字幕**：内封、外挂和本地字幕，语言偏好、样式与延迟调整；在线字幕搜索与载入属于 **Pro**。
+- **弹幕**：多源匹配、本地弹幕、热度图，以及字体、速度、区域与屏蔽设置。
+- **控制**：时轴缩略图、片头片尾标记与跳过、自定义快捷键、窗口与全屏模式。
+- **缓存**：缓冲与完整缓存设置；Beta 内核支持下一集媒体预加载，需开启相关设置，且不与完整缓存同时使用。
+- **Anime4K（Pro）**：动画超分辨率。
 
-首次使用建议：
+![播放器与时轴缩略图](./screenshots/readme-1.3.0/10-player.jpg)
+
+> HDR / Dolby Vision 的最终效果取决于媒体、显卡、驱动、显示设备和 Windows 设置，不等同于所有设备上的原生 Dolby Vision 元数据直通。预加载也受媒体格式、来源和服务器响应影响。
+
+## 📸 留下喜欢的镜头
+
+短按截图按钮捕获画面，长按录制最长约 10 秒 GIF。在编辑页选择默认、电影票或横版拍立得版式，保存、复制并保存，或设为个人中心背景。
+
+详情页还可以查看公共观影感受；登录 WWPlayer 账户后，选择并提交自己的表情。
+
+![电影票截图编辑](./screenshots/readme-1.3.0/13-capture.jpg)
+
+## 🌐 NEXUS 与模块
+
+通过 [NEXUS](https://nexus.wwplayer.com) 分享和载入首页、片单与模块。
+
+- 输入分享码或选择本地文件载入作品；首页可以携带所需模块。
+- 在线载入的作品支持手动同步最新版本；同步会替换对应内容，不保留该项的本地修改。
+- 登录 WWPlayer 账户后可发布、更新自己的作品，也可以仅导出本地文件。
+- 模块可从文件、URL 或模块索引安装，为栏目、搜索和资源扩展来源。
+
+![NEXUS 分享](./screenshots/readme-1.3.0/15-nexus.jpg)
+
+## ☁️ 账户、配置与备份
+
+WWPlayer 账户提供个人资料、月度观看统计和云端配置同步。每台设备首次登录该账户时尝试恢复已有云端配置，之后可手动上传或恢复；不会在每次启动时覆盖本机修改。
+
+- 云端配置可包含服务器、线路、首页、模块和通用偏好；本机播放记录与 Store 授权不随配置恢复覆盖。
+- 支持 `.wwpcfg` 服务器配置导入/导出；**Pro** 另提供 WebDAV 配置备份与恢复。
+- WebDAV 备份只使用 WebDAV 登录凭据，不需要独立备份密码。
+
+> 配置可能包含媒体服务器凭据。账户云端配置采用服务端托管加密，并非端到端加密；WebDAV 备份依靠服务权限和 HTTPS 保护，请使用可信的私人空间。发布 NEXUS 作品前也应检查并移除敏感信息。
+
+<details>
+  <summary><strong>查看个人中心与观看统计</strong></summary>
+  <br />
+  <img src="./screenshots/readme-1.3.0/17-account.jpg" width="380" alt="个人中心与月度观看统计" />
+</details>
+
+## ✨ 免费版与 Pro
+
+| 免费版 | Pro 新增能力 |
+| --- | --- |
+| 1 个 Emby、Jellyfin 或飞牛影视服务器 | 不限数量的媒体服务器 |
+| 本地、WebDAV、OpenList、OneDrive、SMB 来源 | 跨服务器搜索、收藏、继续观看和资源聚合 |
+| 首页、多首页、栏目、模块与片单 | 详情页与播放器中的跨服务器换源 |
+| 内置 libmpv、外置 mpv、字幕轨、本地字幕、弹幕、截图与 GIF | 在线字幕搜索与载入、Anime4K |
+| TMDB、Trakt、Bangumi 连接 | 本地、WebDAV、OpenList 媒体刮削与更正 |
+| WWPlayer 账户与配置同步、NEXUS 载入和本地导出 | WebDAV 配置备份与恢复 |
+
+首页与模块本身不需要 Pro；其中引用的 Pro 数据能力仍受授权限制。Pro 通过 Microsoft Store 授权，价格和有效期以应用内商店信息为准。WWPlayer 账户与媒体服务器账号均不授予 Pro。
+
+## 📦 下载与开始使用
+
+**Windows 10 / 11 · x64 · 1.3.0**
+
+[从 Microsoft Store 获取 WWPlayer](https://apps.microsoft.com/detail/9ND8050FCRG2)。MSIX 与 Portable 的安装及数据位置说明见 [Wiki](./docs/wwplayer-wiki.md#安装更新与数据位置)。
 
 1. 打开“服务器”，添加媒体服务器、网络存储或本地目录。
-2. 在“设置”中按需配置 TMDB、Trakt、代理、字幕和播放器。
-3. 返回首页或发现页，打开详情并选择合适资源播放。
+2. 按需连接 TMDB、Trakt、Bangumi，配置字幕、弹幕与播放器。
+3. 浏览首页或媒体库，打开详情，选择资源并播放。
 
-> [!TIP]
-> 播放 HDR / Dolby Vision 内容时，请同时检查 Windows HDR、显示设备、显卡驱动和连接链路。WWPlayer 可以识别这些来源并执行兼容输出，但最终呈现仍取决于整套硬件与系统环境，不能等同于所有设备上的原生 Dolby Vision 元数据直通。
-
-## ℹ️ 兼容性与说明
-
-- README 截图基于 WWPlayer 1.1.6；实际内容、海报、资源数量和可用操作取决于你自己的媒体来源。
-- 部分聚合、发现模块和 WebDAV 配置同步能力可能随授权状态不同，以应用内说明为准。
-- 第三方服务的名称与商标归各自权利人所有；WWPlayer 与其不存在未说明的隶属或授权关系。
-- 建议反馈问题时附带软件版本、来源类型、复现步骤和脱敏后的相关日志。
+完整操作与常见问题请查看 [在线使用文档](https://wwplayer.com/docs.html) 或 [仓库 Wiki](./docs/wwplayer-wiki.md)。截图基于 1.3.0，可用内容取决于你接入的来源。
 
 ## 🙏 相关项目与服务
 
-[mpv](https://mpv.io/) · [Electron](https://www.electronjs.org/) · [React](https://react.dev/) · [TMDB](https://www.themoviedb.org/) · [Trakt](https://trakt.tv/) · [Emby](https://emby.media/) · [Jellyfin](https://jellyfin.org/)
+[mpv](https://mpv.io/) · [Electron](https://www.electronjs.org/) · [React](https://react.dev/) · [TMDB](https://www.themoviedb.org/) · [Trakt](https://trakt.tv/) · [Bangumi](https://bgm.tv/) · [Emby](https://emby.media/) · [Jellyfin](https://jellyfin.org/)
+
+第三方名称与商标归各自权利人所有。反馈问题时请提供版本、来源类型、复现步骤和脱敏后的日志。
+
+开发维护：[模块职责、验证与发布指南](./docs/project-maintenance.md) · [当前代码范围](./ACTIVE_CODE_MAP.md)
