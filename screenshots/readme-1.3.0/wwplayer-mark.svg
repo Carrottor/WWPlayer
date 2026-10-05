@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="80 240 320 320" role="img" aria-labelledby="title">
+  <title id="title">WWPlayer · 石墨雾青 · 交叠层次</title>
+  <defs>
+    <linearGradient id="graphite-upper" gradientUnits="userSpaceOnUse" x1="294.07792" y1="322.33599200000003" x2="123.289216" y2="437.908992"><stop stop-color="#202123"/><stop offset=".53" stop-color="#48494C"/><stop offset="1" stop-color="#77787C"/></linearGradient>
+    <linearGradient id="graphite-lower" gradientUnits="userSpaceOnUse" x1="123.289216" y1="480" x2="333.81999999999994" y2="480"><stop stop-color="#202123"/><stop offset=".55" stop-color="#48494C"/><stop offset="1" stop-color="#77787C"/></linearGradient>
+    <clipPath id="outer-clip"><path d="M157 272C209 272 370 347 370 400 C370 453 209 528 157 528 C127 528 110 486 110 400 C110 314 127 272 157 272Z"/></clipPath>
+    <filter id="upper-overlap-shadow" filterUnits="userSpaceOnUse" x="96" y="260" width="220" height="212" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.15" result="blur"/>
+      <feOffset in="blur" dy="1.5" result="offset"/>
+      <feFlood flood-color="#172522" flood-opacity=".22"/>
+      <feComposite in2="offset" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="mist-teal" gradientUnits="userSpaceOnUse" x1="163" y1="350" x2="332" y2="463"><stop stop-color="#D0E4DF"/><stop offset=".48" stop-color="#A6CEC6"/><stop offset="1" stop-color="#79AAA4"/></linearGradient>
+    <filter id="white-shadow" filterUnits="userSpaceOnUse" x="155" y="302" width="177" height="169" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.3" result="soft-blur"/>
+      <feOffset in="soft-blur" dx="0" dy="2.8" result="soft-offset"/>
+      <feFlood flood-color="#203B37" flood-opacity=".22" result="soft-color"/>
+      <feComposite in="soft-color" in2="soft-offset" operator="in" result="soft-shadow"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation=".65" result="contact-blur"/>
+      <feOffset in="contact-blur" dx="0" dy=".8" result="contact-offset"/>
+      <feFlood flood-color="#203B37" flood-opacity=".13" result="contact-color"/>
+      <feComposite in="contact-color" in2="contact-offset" operator="in" result="contact-shadow"/>
+      <feMerge><feMergeNode in="soft-shadow"/><feMergeNode in="contact-shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g clip-path="url(#outer-clip)">
+    <path id="graphite-lower-ribbon" fill="url(#graphite-lower)" d="M157 272C209 272 370 347 370 400 C370 453 209 528 157 528 C127 528 110 486 110 400 C110 314 127 272 157 272Z"/>
+    <path id="original-black-region" fill="url(#mist-teal)" d="M123.289216 437.908992C121.514179 413.974723 167 370 198 348.4 C232 326.4 267.254505 306.79558 294.07792 322.335992 C335.9324 346.5848 370 375.62 370 400 C370 415.9 355.51 433.78 333.82 451.021 C296.244679 480.888963 125.212173 463.837784 123.289216 437.908992Z"/>
+    <g filter="url(#white-shadow)"><path id="pure-white-center" fill="#FFFFFF" d="M198 348.4C222 319 269 318 288.679349 333.779033C308.70173 345.379198 310.86 371.75 301.07 393.11C285.94 426.04 248.56 455.41 240.55 449.981C237.88 448.171334 240.105 436.72 240.105 431.38C240.105 423.37 238.325 417.674 232.807 418.92C222.75 421.190936 201.835 445.353 187.506 439.301C178.695 435.579584 181.81 381.362 198 348.4Z"/></g>
+    <path id="graphite-upper-ribbon" fill="url(#graphite-upper)" filter="url(#upper-overlap-shadow)" d="M157 272C185.08 272 244.9444 293.87 294.07792 322.335992C267.254505 306.79558 232 326.4 198 348.4C167 370 125 410 112.764564 453.366256C110.938825 437.9901 110 420.21 110 400C110 314 127 272 157 272Z"/>
+  </g>
+</svg>
